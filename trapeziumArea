@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+double TrapeziumArea  (double a, double b, double h)
+	return (a + b) * h / 2.0;
+}
+int main (){
+	double a, b, h;
+	
+	cout<< “Please enter the first length: ” 
+	cin >> a;
+
+	while (a <= 0){
+		cout<< ”This input is not valid, please enter a positive number. \n”;
+		cout << “Please re-enter the length: ”
+		cin >> a;
+	}
+	cout << “Please enter the second length: ”
+	cin >> b;
+
+	while (b <= 0){
+		cout<< ”This input is not valid, please enter a positive number. \n”;
+		cout << “Please re-enter the length: ”
+		cin >> b;
+	}
+	cout << “Please enter the height: ”
+	cin >> h;
+
+	while (h <= 0){
+		cout<< ”This input is not valid, please enter a positive number. \n”;
+		cout << “Please re-enter the height: ”
+		cin >> h;
+	}
+
+	double area = TrapeziumArea(a, b, h);
+	cout << “The area of the trapezium is: ” << area << endl;
+	return 0;
